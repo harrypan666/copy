@@ -11,8 +11,8 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/api\.hechuangxinxi\.xyz\/api\/v\d\/(users|startup|ads) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/JavDB.js
-^https?:\/\/api\.hechuangxinxi\.xyz\/api\/v\d\/(movies|startup|logs\/movie_played) url script-request-header https://raw.githubusercontent.com/chxm1023/Rewrite/main/JavDB.js
+^https?:\/\/api\.hechuangxinxi\.xyz\/api\/v\d\/(users|startup|ads) url script-response-body https://raw.githubusercontent.com/harrypan666/copy/main/1.js
+^https?:\/\/api\.hechuangxinxi\.xyz\/api\/v\d\/(movies|startup|logs\/movie_played) url script-request-header https://raw.githubusercontent.com/harrypan666/copy/main/1.js
 
 [mitm]
 hostname = api.hechuangxinxi.xyz
@@ -25,7 +25,7 @@ const chxm1023 = JSON.parse(typeof $response != "undefined" && $response.body ||
 
 if (typeof $response == "undefined") {
   const headers = $request.headers;
-  //headers["authorization"] = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MzE4OTE0NSwidXNlcm5hbWUiOiJjaHhtMTAyNSJ9.9biip2hb60jXeakBMbnP-5QiLyycLj9s7dpHyXNUp7E";
+  headers["authorization"] = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MzE4OTE0NSwidXNlcm5hbWUiOiJjaHhtMTAyNSJ9.9biip2hb60jXeakBMbnP-5QiLyycLj9s7dpHyXNUp7E";
   chxm1024.headers = headers;
 } else {
   const user = /users/;
